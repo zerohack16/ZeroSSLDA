@@ -1,0 +1,4 @@
+wget https://raw.githubusercontent.com/zerohack16/ZeroSSLDA/main/quickssl.sh
+chmod +x quickssl.sh
+./quickssl.sh
+rm quickssl.sh
