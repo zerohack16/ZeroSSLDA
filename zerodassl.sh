@@ -23,6 +23,13 @@ echo "instaling Let's encrypt and updating apache:"
 /usr/local/directadmin/custombuild/build letsencrypt
 /usr/local/directadmin/custombuild/build apache
 
+echo "updating exim version"
+/usr/local/directadmin/custombuild/build set eximconf yes
+/usr/local/directadmin/custombuild/build set eximconf_release 4.5
+/usr/local/directadmin/custombuild/build set dovecot_conf yes
+/usr/local/directadmin/custombuild/build exim_conf
+/usr/local/directadmin/custombuild/build dovecot_conf
+
 echo "messing up with directadmin.conf file"
 echo "letsencrypt=1" >> /usr/local/directadmin/conf/directadmin.conf
 
