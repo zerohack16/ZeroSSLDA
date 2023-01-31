@@ -10,7 +10,8 @@ echo "++++++++++++++++++++++++++++++++++++"
 
 echo "Changin DirectAdmin enviroment"
 echo "action=directadmin&value=restart" >> /usr/local/directadmin/data/task.queue; /usr/local/directadmin/dataskq d2000
-
+echo "changes on email conf"
+echo mail_sni=1 >> conf/directadmin.conf
 echo "Rebuilding confs"
 /usr/local/directadmin/custombuild/build rewrite_confs
 
