@@ -21,7 +21,7 @@ echo "Updating"
 /usr/local/directadmin/custombuild/build update
 
 
-echo "instaling Let's encrypt and updating apache:"
+echo "installing Let's encrypt and updating apache:"
 /usr/local/directadmin/custombuild/build letsencrypt
 /usr/local/directadmin/custombuild/build apache
 
