@@ -14,6 +14,8 @@ echo "changes on email conf"
 echo mail_sni=1 >> /usr/local/directadmin/conf/directadmin.conf
 echo "Rebuilding confs"
 /usr/local/directadmin/custombuild/build rewrite_confs
+echo "Disabling mod ruid"
+sed -i -r -e '/^mod_ruid2.*/s/yes/no/' /usr/local/directadmin/custombuild/options.conf 
 
 echo "Updating"
 /usr/local/directadmin/custombuild/build update
